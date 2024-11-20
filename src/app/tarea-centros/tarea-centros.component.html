@@ -1,0 +1,38 @@
+<h1 style="text-align: center; margin-bottom: 50px;">Lista de institutos</h1>
+
+<!-- carta con informacion del instituto -->
+<div class="card text-center" style="font-size: 25px; margin: 5px;">
+  <p style="font-size: 40px;"><strong>{{nombreActivo}}</strong></p>
+  <p>{{localidadActivo}}</p>
+  <p>{{familiaActivo}}</p>
+  <p><img src={{logoActivo}} alt="No exite logos para mostrar"></p>
+</div>
+
+<!-- Botones de borrar, crear, mover izq/der, todos con un ngIf para que no aparezcan dandose x caso -->
+<div style="display: flex; justify-content: space-around; margin: 10px;">
+  <button *ngIf="num != 0" (click)="cambioInstiIzq()" class="btn btn-primary">
+    < Anterior
+  </button>
+
+
+  <button *ngIf="listaInstis.length != 0" (click)="borrar()" class="btn btn-primary bg-danger">
+    X eliminar
+  </button>
+
+  <button *ngIf="pilaborrado.length != 0" (click)="anadir()" class="btn btn-primary bg-success">
+    Añadir
+  </button>
+
+  <button *ngIf="num != listaInstis.length-1" (click)="cambioInstider()" class="btn btn-primary">
+    > Posterior
+  </button>
+</div>
+
+<hr>
+<hr>
+<!-- Lista de los borrados -->
+<h2>Listado borrados</h2>
+
+<ul class="mt-2 list-group">
+<li *ngFor="let instituto of pilaborrado" class="list-group-item">{{instituto.nombre}}</li>
+</ul>
