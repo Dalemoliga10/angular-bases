@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { TareaCentrosComponent } from "./tarea-centros/tarea-centros.component";
-import { HeroesModule } from './heroes/heroes.module';
+import { DbzModule } from './dbz/dbz.module';
+import { ContadorModule } from "./contador/contador.module";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeroesModule, TareaCentrosComponent],
+  imports: [DbzModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
