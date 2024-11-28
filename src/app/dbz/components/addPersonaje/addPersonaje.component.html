@@ -1,0 +1,9 @@
+<h4>Añadir personaje</h4>
+    <form (ngSubmit)="addPersonaje()" class="row">
+      <input type="text" [(ngModel)]= "personaje.nombre" name="nombre" class="form-control mb-2" placeholder="Nombre">
+      <input type="text" class="form-control mb-2" placeholder="Fuerza">
+      <button (click)="addPersonaje()" type="submit" class="btn btn-primary">Añadir</button>
+      <!-- dbz-add-personaje -->
+
+<pre>{{personaje | json}}</pre>
+    </form>

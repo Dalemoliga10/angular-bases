@@ -1,0 +1,15 @@
+<h4>listado</h4>
+      <ul class="list-group">
+        <!-- Alt arriba para mover una linea, luego defino i equivalente al index, y funciones -->
+         <!-- Similar a nffor, pero en vez de no aparecer algo es que no aparezca un estilo -->
+        <li *ngFor="let personaje of listaPersonajes; let i=index; let esPrimero=even; let esUltimo=last" class="list-group-item"
+        [ngClass]=  "{
+          'bg-primary':esPrimero,
+          'bg-danger':esUltimo,
+          'bg-success': personaje.nombre == 'Goku'
+        }"
+        > <!--Aqui por ejemplo, si el nombres = Goku, entonces pinta verde, el primero y el ultimo tienen sus colores-->
+          <strong>Nombre:</strong> {{personaje.nombre}} - <strong>Fuerza:</strong> {{personaje.fuerza}}
+          <span>indice:{{i}}- Es par: {{esPrimero}} - es el ultimo: {{esUltimo}}</span>
+        </li>
+      </ul>
