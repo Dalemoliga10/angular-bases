@@ -14,12 +14,15 @@ export class dbzAddComponent implements OnInit {
   @Output()
   public onNewPersonaje: EventEmitter<Personaje> = new EventEmitter();
 
+
   public personaje:Personaje = {
     nombre:"",
     fuerza:0
   }
 
   public addPersonaje(): void{
+    //Hacer debug
+    //debugger;
     console.log(this.personaje);
 
     //Comprobacion de que el personaje no esta vacio
@@ -28,9 +31,13 @@ export class dbzAddComponent implements OnInit {
     //Emitimos personaje creado
     this.onNewPersonaje.emit(this.personaje);
 
+    this.personaje = {
+      nombre: '',
+      fuerza:0
+    };
     //Inicializo
-    this.personaje.nombre = '';
-    this.personaje.fuerza = 0;
+    // this.personaje.nombre = '';
+    // this.personaje.fuerza = 0;
   }
   ngOnInit() { }
 }
