@@ -13,7 +13,7 @@
             <strong>Nombre:</strong> {{personaje.nombre}} - <strong>Fuerza:</strong> {{personaje.fuerza}}
             <span>indice:{{i}}- Es par: {{esPrimero}} - es el ultimo: {{esUltimo}}</span>
             <!-- Aqui lo llamamos a que cuando haga click se active la funcion que emita -->
-            <button (click)="eliminarPeronaje(i)" class="btn btn-danger" style="margin-left: 20px;">x</button>
+            <button (click)="eliminarPeronaje(personaje.id!)" class="btn btn-danger" style="margin-left: 20px;">x</button>
           </div>
         </li>
       </ul>
