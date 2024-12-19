@@ -6,11 +6,11 @@
     <!-- Aqui estoy diciendole a dbz-lista cual es la lista -->
     <!-- Aqui nos suscribimos al emisor con el $event -->
      <!-- Se esta realizando llamada al dbzService -->
-      <dbz-lista (onDeletePersonaje)="dbzService.onDeletePersonaje($event)" [milista] = "dbzService.Personajes"></dbz-lista>
+      <dbz-lista (onDeletePersonaje)="onDeletePersonaje($event)" [milista] = "personajes"></dbz-lista>
   </div>
 
   <div class="col">
     <!-- Usamos el $event para enviar el personaje desde el html -->
-    <dbz-add (onNewPersonaje)="dbzService.onNewPersonaje($event)"></dbz-add>
+    <dbz-add (onNewPersonaje)="onNewPersonaje($event)"></dbz-add>
   </div>
 </div>

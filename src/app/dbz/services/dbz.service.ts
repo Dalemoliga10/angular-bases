@@ -26,7 +26,11 @@ export class dbzService {
     //Metodo que e va a ejecutar en el evento
     public onNewPersonaje(personaje:Personaje): void{
       //COn el uuid añadido, ahora podemos añadir identificadores unicos
-      const newPersonaje: Personaje = {...personaje}
+      const newPersonaje: Personaje = {
+        id:uuid(),
+        nombre: personaje.nombre,
+        fuerza: personaje.fuerza
+      }
 
       this.Personajes.push(newPersonaje);
     }
